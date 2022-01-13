@@ -1,15 +1,23 @@
 // Assignment code here
 
-var SpecialCharacter;
-var Numbercharacters;
-var UpperCase;
-var LowerCase;
+var characterPrompt = function () {
+  characterLength = prompt("How many characters will your new password be?");
+
+  if (characterLength <8 || characterLength > 128 || isNaN(characterLength)){
+    alert ("Hold up now, make sure your password is between 8-128 characters!");
+    return characterPrompt();
+  }
+}
 
 
-number = ['0', '1','2','3','4','5','6','7','8','9'];
-character = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
-Alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-CapitalAlphabet = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+
+
+
+var numbers = ['0', '1','2','3','4','5','6','7','8','9'];
+var SpecialCharacter = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
+var Alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+var CapitalAlphabet = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+var securePassword = "";
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 

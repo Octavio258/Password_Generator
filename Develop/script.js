@@ -47,6 +47,10 @@ var userPrompt = function() {
     alert("If you don't pick at least one character type, there won't be anything I can do for you.");
     return userPrompt();
   }
+
+  for(var i=securePassword.length; i<characterLength; i++){
+    securePassword += generateRandomItems(passCharacters);
+  }
   return securePassword;
 }
 

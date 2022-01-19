@@ -23,6 +23,13 @@ var userPrompt = function() {
     passCharacters = passCharacters.concat(CapitalAlphabet);
     securePassword+= generateRandomItems(CapitalAlphabet);
   }
+
+  var tinyAlph = confirm("Will your password have lowercase letters?");
+
+  if(tinyAlph) {
+    passCharacters = passCharacters.concat(Alphabet);
+    securePassword+= generateRandomItems(Alphabet);
+  }
   return securePassword;
 }
 

@@ -7,6 +7,7 @@ var generatePass = function () {
     alert ("Hold up now, make sure your password is between 8-128 characters!");
     return generatePass();
   }
+  return userPrompt();
 }
 
 var userPrompt = function() {

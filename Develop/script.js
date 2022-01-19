@@ -30,6 +30,13 @@ var userPrompt = function() {
     passCharacters = passCharacters.concat(Alphabet);
     securePassword+= generateRandomItems(Alphabet);
   }
+
+  var Numerals = confirm ('Will your password have numbers?');
+
+  if (Numerals) {
+    passCharacters = passCharacters.concat(numbers);
+    securePassword += generateRandomItems(numbers);
+  }
   return securePassword;
 }
 

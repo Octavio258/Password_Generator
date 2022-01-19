@@ -16,6 +16,14 @@ var userPrompt = function() {
     passCharacters = passCharacters.concat(SpecialCharacters)
     securePassword += generateRandomItems(SpecialCharacters)
   }
+
+  var CaptlAlph = confirm("Do you want capital letters?");
+
+  if (CaptlAlph) {
+    passCharacters = passCharacters.concat(CapitalAlphabet);
+    securePassword+= generateRandomItems(CapitalAlphabet);
+  }
+  return securePassword;
 }
 
 var generateRandomItems = function(characterArray) {

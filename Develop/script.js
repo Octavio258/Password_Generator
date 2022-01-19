@@ -1,11 +1,11 @@
 // Assignment code here
 
-var characterPrompt = function () {
+var generatePass = function () {
   characterLength = prompt("How many characters will your new password be?");
 
   if (characterLength <8 || characterLength > 128 || isNaN(characterLength)){
     alert ("Hold up now, make sure your password is between 8-128 characters!");
-    return characterPrompt();
+    return generatePass();
   }
 }
 
@@ -75,7 +75,7 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  var password = generatePass();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;

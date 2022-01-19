@@ -14,7 +14,7 @@ var userPrompt = function() {
   var SpecialChar = confirm ("Do you want special characters for your password?");
 
   if (SpecialChar) {
-    passCharacters = passCharacters.concat(SpecialCharacters)
+    passCharacters = passCharacters.concat(SpecialCharacters);
     securePassword += generateRandomItems(SpecialCharacters)
   }
 
@@ -22,17 +22,17 @@ var userPrompt = function() {
 
   if (CaptlAlph) {
     passCharacters = passCharacters.concat(CapitalAlphabet);
-    securePassword+= generateRandomItems(CapitalAlphabet);
+    securePassword += generateRandomItems(CapitalAlphabet);
   }
 
   var tinyAlph = confirm("Will your password have lowercase letters?");
 
   if(tinyAlph) {
     passCharacters = passCharacters.concat(Alphabet);
-    securePassword+= generateRandomItems(Alphabet);
+    securePassword += generateRandomItems(Alphabet);
   }
 
-  var Numerals = confirm ('Will your password have numbers?');
+  var Numerals = confirm('Will your password have numbers?');
 
   if (Numerals) {
     passCharacters = passCharacters.concat(numbers);
@@ -49,7 +49,7 @@ var userPrompt = function() {
     return userPrompt();
   }
 
-  for(var i=securePassword.length; i<characterLength; i++){
+  for(var i=securePassword.length; i< characterLength; i++){
     securePassword += generateRandomItems(passCharacters);
   }
   return securePassword;
@@ -57,7 +57,7 @@ var userPrompt = function() {
 
 var generateRandomItems = function(characterArray) {
   console.log(characterArray);
-  guaranteeCharacters = characterArray[Math.floor(Math.random() * characterArray.characterLength)];
+  guaranteeCharacters = characterArray[Math.floor(Math.random() * characterArray.length)];
   return guaranteeCharacters;
 }
 

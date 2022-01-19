@@ -39,10 +39,10 @@ var userPrompt = function() {
   }
 
   if (
-    SpecialChar = false &&
-    CaptlAlph = false &&
-    tinyAlph = false &&
-    Numerals = false
+    SpecialChar === false &&
+    CaptlAlph === false &&
+    tinyAlph === false &&
+    Numerals === false
   ) {
     alert("If you don't pick at least one character type, there won't be anything I can do for you.");
     return userPrompt();
